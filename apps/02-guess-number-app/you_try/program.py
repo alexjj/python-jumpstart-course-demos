@@ -8,16 +8,16 @@ print()
 the_number = random.randint(0, 100)
 guess: int = -1
 
+name = input('What is your name? ')
 
 while guess != the_number:
     guess_text = input('Guess a number between 0 and 100: ')
     guess = int(guess_text)
 
     if guess < the_number:
-        print('Your guess is too low')
+        print('Sorry {1}, Your guess of {0} is too low'.format(guess, name))
     elif guess > the_number:
-        print('Your guess is too high')
+        print('Sorry {1}, Your guess of {0} is too high'.format(guess, name))
     else:
-        print('Well done! You guessed correctly')
+        print('Well done {1}! Your guess of {0} is right!'.format(guess, name))
 
-print('Done!')
