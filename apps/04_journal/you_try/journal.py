@@ -33,10 +33,6 @@ def save(name, journal_data):
 
 
 def get_full_pathname(name):
-    filename = newmethod468(name)
-    return filename
-
-def newmethod468(name):
     filename = os.path.abspath(os.path.join('.', 'journals/', name + '.jrl'))
     return filename
 
